@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const users = require('./controllers/users');
 
 // Middleware for CORS.
 app.use(cors());
