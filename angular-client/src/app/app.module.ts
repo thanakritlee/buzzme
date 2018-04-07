@@ -4,11 +4,21 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
 import { AppComponent } from './app.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { HomeComponent } from './home/home.component';
+import { UsersComponent } from './users/users.component';
+import { MyTimetableComponent } from './my-timetable/my-timetable.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavigationComponent,
+    HomeComponent,
+    UsersComponent,
+    MyTimetableComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
