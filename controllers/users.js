@@ -11,7 +11,7 @@ const router = express.Router();
  */
 var users_array = [
     {id: 0,
-    name: 'Charlie'},
+    fname: 'Charlie', lname: 'Lee',  contact: '0466789220', email: 'chalee@gmail.com', address:},
     {id: 1,
     name: 'Jimmy'},
     {id: 2,
