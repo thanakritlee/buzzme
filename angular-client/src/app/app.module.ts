@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { RouterModule, Routes } from '@angular/router';
+import { FullCalendarModule } from 'ng-fullcalendar';
 
 import { HttpModule } from '@angular/http';
 import { UserService } from './services/user.service';
@@ -32,7 +33,8 @@ import { LoginComponent } from './login/login.component';
     BrowserModule,
     MDBBootstrapModule.forRoot(),
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    FullCalendarModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [
