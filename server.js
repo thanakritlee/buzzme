@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const users = require('./controllers/users');
+const calendar = require('./controllers/calendar');
 
 // Middleware for CORS.
 app.use(cors());
@@ -24,6 +25,8 @@ app.get('/', (req, res) => {
 
 // Route the users api to the users route controller.
 app.use('/api/users', users);
+
+app.use('/api/calendar', calendar);
 
 // Listen on port = 3000.
 app.listen(port, () => {

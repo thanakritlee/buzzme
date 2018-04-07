@@ -10,16 +10,16 @@ export class CalendarService {
 
   constructor(private http: Http) { }
 
-  private serverApi = 'http://localhost:3000/api/calendar';
+  private serverApi = 'http://localhost:3000/api/calendar/';
 
-  public getCalendar(id: number): Observable<Calendar> {
+  public getAllCalendar(): Observable<(Calendar[])[]> {
     // Construct URI to api with the user id.
-    let URI = this.serverApi + '/' + id;
+    let URI = this.serverApi;
     return this.http.get(URI)
       // json-ify each element of the array.
       .map(res => res.json())
       // type-cast each element to be a Calendar object.
-      .map(res => <Calendar>res);
+      .map(res => <(Calendar[])[]>res);
   }
 
 }
