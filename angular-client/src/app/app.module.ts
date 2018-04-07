@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { UserService } from './services/user.service';
 import { CalendarService } from './services/calendar.service';
+import { LoginService } from './services/login.service';
 
 import { AppRoutingModule } from './routing/app-routing.module';
 
@@ -15,6 +16,7 @@ import { HomeComponent } from './home/home.component';
 import { UsersComponent } from './users/users.component';
 import { MyTimetableComponent } from './my-timetable/my-timetable.component';
 import { AboutComponent } from './about/about.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { AboutComponent } from './about/about.component';
     HomeComponent,
     UsersComponent,
     MyTimetableComponent,
-    AboutComponent
+    AboutComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,11 @@ import { AboutComponent } from './about/about.component';
     HttpModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
-  providers: [],
+  providers: [
+    UserService,
+    CalendarService,
+    LoginService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

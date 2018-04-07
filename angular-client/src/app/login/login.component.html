@@ -1,0 +1,17 @@
+<div class="container pt-5">
+  <form>
+
+    <div class="md-form animated fadeInDown">
+      <input type="string" class="form-control" id="usernameInput" [(ngModel)]="usernameInput" name="usernameInput" mdbActive>
+      <label for="Username">Username</label>
+    </div>
+
+    <div class="md-form animated fadeInDown">
+      <input type="string" class="form-control" id="passwordInput" [(ngModel)]="passwordInput" name="passwordInput" mdbActive>
+      <label for="Password">Password</label>
+    </div>
+
+    <button type="button" class="btn btn-block btn-primary wave-light animated fadeInDown" (click)="login()" mdbRippleRadius>Login</button>
+
+  </form>
+</div>

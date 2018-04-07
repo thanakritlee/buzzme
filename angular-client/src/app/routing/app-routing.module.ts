@@ -6,12 +6,14 @@ import { AboutComponent } from '../about/about.component';
 import { HomeComponent } from '../home/home.component';
 import { MyTimetableComponent } from '../my-timetable/my-timetable.component';
 import { UsersComponent } from '../users/users.component';
+import { LoginComponent } from '../login/login.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'users', component: UsersComponent },
   { path: 'mytimetable', component: MyTimetableComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'login', component: LoginComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
