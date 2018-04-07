@@ -11,11 +11,11 @@ const router = express.Router();
  */
 var users_array = [
     {id: 0,
-    fname: 'Charlie', lname: 'Lee',  contact: '0466789220', email: 'chalee@gmail.com', address:},
+    fname: 'Charlie', lname: 'Lee',  contact: '0466789220', email: 'chalee@gmail.com', address:'16 Hawthorn road Victoria'},
     {id: 1,
-    name: 'Jimmy'},
+    fname: 'Jimmy',lname: 'Chan', contact: '0456245772', email: 'jimchan@gmail.com', address:'134 glenferri road Victoria' },
     {id: 2,
-    name: 'Kevin'},
+    fname: 'Kevin', lname: 'Bern' contact: '0456234889', email: 'kebbern@gmail.com', address: '19 blackburn road Victoria'},
 ];
 
 /**
@@ -80,7 +80,7 @@ router.route('/')
         // Creating the User object.
         user = {
             id: id_counter,
-            name: req.body.name
+            fname: req.body.fname
         };
         // Add it to the database.
         users_array.push(user);
