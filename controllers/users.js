@@ -15,7 +15,7 @@ var users_array = [
     {id: 1,
     fname: 'Jimmy',lname: 'Chan', contact: '0456245772', email: 'jimchan@gmail.com', address:'134 glenferri road Victoria' },
     {id: 2,
-    fname: 'Kevin', lname: 'Bern' contact: '0456234889', email: 'kebbern@gmail.com', address: '19 blackburn road Victoria'},
+    fname: 'Kevin', lname: 'Bern', contact: '0456234889', email: 'kebbern@gmail.com', address: '19 blackburn road Victoria'},
 ];
 
 /**
