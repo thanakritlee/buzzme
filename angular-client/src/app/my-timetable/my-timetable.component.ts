@@ -77,18 +77,33 @@ export class MyTimetableComponent implements OnInit {
       
       // Delete day from available_time where event shows up.
       // Get date from unavailable time, event.
-      let date = event.start.slice(0, 10);
+      let dateStart = event.start.slice(0, 10);
+      let dateEnd = '';
+      if ('end' in event) {
+        // If there exist an event end date.
+        dateEnd = event.end.slice(0, 10);
+      }
       // Find date in available_time.
       let matched_date_index = 0;
+      let matched_end_date_index = 0;
       for (let av_event of this.available_time) {
-        if (av_event.start.slice(0, 10) == date) {
+        if (av_event.start.slice(0, 10) == dateStart) {
           // If date match, delete from list.
-          break;
+          if (dateEnd) {
+            // If there exist an event end date.
+            this.available_time.splice(matched_date_index, 1);
+            if (av_event.start.slice(0, 10) == dateEnd) {
+              break
+            }
+          }
+          else {
+            // else, no end date specified.
+            this.available_time.splice(matched_date_index, 1);
+            break;
+          }
         }
         matched_date_index += 1;
       }
-      this.available_time.splice(matched_date_index, 1);
-
     }
   }
 
