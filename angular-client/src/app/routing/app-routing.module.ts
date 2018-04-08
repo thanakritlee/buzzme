@@ -7,6 +7,7 @@ import { HomeComponent } from '../home/home.component';
 import { MyTimetableComponent } from '../my-timetable/my-timetable.component';
 import { UsersComponent } from '../users/users.component';
 import { LoginComponent } from '../login/login.component';
+import { FreeTimeDetailComponent } from '../free-time-detail/free-time-detail.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -14,6 +15,7 @@ const appRoutes: Routes = [
   { path: 'mytimetable', component: MyTimetableComponent },
   { path: 'about', component: AboutComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'freetime', component: FreeTimeDetailComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 

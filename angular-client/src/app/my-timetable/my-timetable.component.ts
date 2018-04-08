@@ -58,22 +58,7 @@ export class MyTimetableComponent implements OnInit {
 
   calculateAvailableTime() {
     for (let event of this.calendar[0]) {
-      // events = [{event}, {event}, {event}];
-      /* if (!('end' in event)) {
-        // If 'end' event is all day.
-        // remove whole day.
-        
-        // find matching date.
-        // remove date.
-        for (let av_event of this.available_time) {
-          if (av_event)
-        }
-      }
-      else {
 
-      } */
-
-      
       
       // Delete day from available_time where event shows up.
       // Get date from unavailable time, event.
@@ -120,7 +105,8 @@ export class MyTimetableComponent implements OnInit {
 
           this.available_time.push({
             title: 'Available',
-            start: '' + i + '-' + month + '-' + day + 'T00:00:00'
+            start: '' + i + '-' + month + '-' + day + 'T00:00:00' ,
+            url: 'http://localhost:4200/freetime'
           });
         }
       }
