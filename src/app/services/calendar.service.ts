@@ -10,7 +10,7 @@ export class CalendarService {
 
   constructor(private http: Http) { }
 
-  private serverApi = 'http://localhost:3000/api/calendar/';
+  private serverApi = 'api/calendar/';
 
   public getAllCalendar(): Observable<(Calendar[])[]> {
     // Construct URI to api with the user id.

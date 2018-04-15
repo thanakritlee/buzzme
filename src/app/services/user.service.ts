@@ -10,7 +10,7 @@ export class UserService {
 
   constructor(private http: Http) {}
 
-  private serverApi = 'http://localhost:3000/api/users/';
+  private serverApi = 'api/users/';
 
   public getAllUsers(): Observable<User[]> {
     let URI = this.serverApi;
