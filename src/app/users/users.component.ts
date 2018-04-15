@@ -13,7 +13,7 @@ export class UsersComponent implements OnInit {
     private userService: UserService
   ) { }
 
-  private user_list: User[] = [];
+  user_list: User[] = [];
 
   ngOnInit() {
     console.log('init before');
