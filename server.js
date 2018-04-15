@@ -12,6 +12,9 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+// Serve only the static files form the dist directory
+app.use(express.static(__dirname + '/dist'));
+
 // Using 3000 as the port to listen to.
 const port = 3000;
 
@@ -29,6 +32,6 @@ app.use('/api/users', users);
 app.use('/api/calendar', calendar);
 
 // Listen on port = 3000.
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`Starting the server at port ${port}`);
 });

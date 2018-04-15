@@ -1,30 +1,30 @@
 <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark bg-blue ie-nav" [containerInside]="false">
   <logo>
-    <a class="logo navbar-brand" href="home">
+    <a class="logo navbar-brand" [routerLink]="home">
       <strong>BuzzMe</strong>
     </a>
   </logo>
   <links>
     <ul class="navbar-nav mr-auto">
       <li class="nav-item waves-light" mdbRippleRadius>
-        <a class="nav-link" href="home">Home
+        <a class="nav-link" [routerLink]="home">Home
           <span class="sr-only">(current)</span>
         </a>
       </li>
       <li class="nav-item waves-light" mdbRippleRadius>
-        <a class="nav-link" href="users">Users</a>
+        <a class="nav-link" [routerLink]="users">Users</a>
       </li>
       <li class="nav-item waves-light" mdbRippleRadius>
-        <a class="nav-link" href="mytimetable">My Timetable</a>
+        <a class="nav-link" [routerLink]="mytimetable">My Timetable</a>
       </li>
       <li class="nav-item waves-light" mdbRippleRadius>
-        <a class="nav-link" href="about">About</a>
+        <a class="nav-link" [routerLink]="about">About</a>
       </li>
     </ul>
     <ul class="navbar-nav mr">
         <li class="nav-item waves-light" mdbRippleRadius>
-            <a class="nav-link" href="login" *ngIf="!isLogin">Login</a>
-            <a class="nav-link" href="login" *ngIf="isLogin">Logout</a>
+            <a class="nav-link" [routerLink]="login" *ngIf="!isLogin">Login</a>
+            <a class="nav-link" [routerLink]="login" *ngIf="isLogin">Logout</a>
         </li>
     </ul>
     <ul class="navbar-nav nav-flex-icons">
